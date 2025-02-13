@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+}
+
+.main-header {
+    padding: 20px;
+    background: linear-gradient(120deg, #6a5acd, #8a79d4, #d3c9e7); /* Light violet gradient */
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d3c9e7; /* Lighter hover color */
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.header-content {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: #6a5acd; /* Light violet */
+        transition: 0.3s;
+        z-index: 1000; /* Higher z-index for visibility */
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        width: 100%;
+        transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: #d3c9e7; /* Lighter hover color */
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1100; /* Ensures hamburger is on top */
+    }
+
+    .hamburger.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .header-content {
+        text-align: center; /* Center-align text for better readability */
+    }
+}
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+} */
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows products to wrap into multiple rows */
+    justify-content: center; /* Centers products in the container */
+    padding: 20px; /* Adds padding around the container */
+}
+
+.product {
+    background: #fff; /* White background for each product */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 15px; /* Space between products */
+    overflow: hidden; /* Ensures inner content does not overflow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    max-width: 300px; /* Maximum width for products */
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarge product on hover */
+}
+
+.product img {
+    width: 100%; /* Make image responsive */
+    aspect-ratio: 1 / 1; /* Set aspect ratio to 1:1 */
+    object-fit: cover; /* Ensure the image covers the area */
+    padding: 10px; /* Add padding around the image */
+    display: block; /* Ensure there's no extra space below the image */
+}
+
+.product-info {
+    padding: 15px; /* Padding around product info */
+    text-align: center; /* Center-align text for better readability */
+}
+
+.product-info h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.product-info p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.price {
+    font-size: 1.3rem; /* Slightly larger font for price */
+    color: #6a5acd; /* Color to match the theme */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.button {
+    display: inline-block; /* Make button an inline block */
+    background: #6a5acd; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.button:hover {
+    background: #8a79d4; /* Lighter shade on hover */
+}
+
+.footer {
+    background: #6a5acd; /* Background color to match theme */
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around the footer */
+    position: relative; /* Allows for absolute positioning of child elements */
+    bottom: 0; /* Fixes the footer at the bottom */
+    width: 100%; /* Ensures full width */
+}
+
+.footer p {
+    margin: 0; /* Removes default margin */
+}
