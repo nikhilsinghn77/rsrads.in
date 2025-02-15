@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSR ads - Professional Brand Marketing</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="./rsrads.png" type="image/png">
+    <style>
+        /* Loader Container */
+        #loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        /* Logo Animation */
+        .loader {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+        }
+
+        .loader .logo {
+            width: 120px;
+            position: absolute;
+            z-index: 2;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            animation: pulse 1.5s infinite;
+        }
+
+        .loader .border {
+            width: 100%;
+            height: 100%;
+            border: 5px solid transparent;
+            border-top: 5px solid #6a1b9a;
+            border-radius: 50%;
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+
+        /* Hide the main content initially */
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader-container">
+        <div class="loader">
+            <img src="./rsrads.png" class="logo" alt="RSR ads Logo">
+            <div class="border"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="logo">RSR ads</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./service.html">For Brands</a></li>
+                    <li><a href="./php_store/view_products.php">Logo Promotion</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header> 
+
+        <!-- Marketing Solutions Section -->
+        <section id="marketing" class="marketing-section">
+            <h2>Our Marketing Solutions</h2>
+            <p>At RSR ads, we are committed to elevating your brand to new heights. Our tailored solutions are crafted to maximize engagement and amplify your brand’s unique voice, ensuring a lasting impact.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="solution-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Brand Strategy</h3>
+                        <p>We partner with you to define your brand’s story, building a strong, cohesive identity. Through data-driven insights, we create strategies tailored to resonate with your target audience, guiding your brand toward greater engagement and loyalty.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="solution-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Social Media Solutions</h3>
+                        <p>Our social media services harness the power of platforms like Instagram, Facebook, and Twitter. Through strategic collaborations with influencers, we expand your reach, while carefully crafted campaigns foster a community around your brand, driving higher visibility and interaction.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="solution-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Digital Advertising</h3>
+                        <p>With our comprehensive advertising solutions, we help you achieve measurable results. From targeted ads on Google to paid social media placements, our team ensures your brand stands out and reaches the right audience at the right time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Ensure loader stays visible for at least 1 second
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("loader-container").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }, 1000); // 1000ms = 1 second delay
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

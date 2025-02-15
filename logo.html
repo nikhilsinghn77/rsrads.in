@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Store</title>
+    <link rel="stylesheet" href="./styles1.css"> <!-- Ensure you have a CSS file for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="./rsrads.png" type="image/png">
+</head>
+<body>
+    
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">RSR ads</div>
+            <div class="search-container">
+                
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./logo.html">Logo Promotion</a></li>
+                    <li><a href="./service.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <center><form method="GET" action="" style="width: 100%;">
+                    <input type="text" name="search" placeholder="Search Brand For Promote" value="" style="width:80%; padding: 10px; border-radius: 20px;">
+                    <button type="submit"  style=" padding: 10px; border-radius: 20px;"><i class="fas fa-search"></i></button>
+                </form></center>
+    </header>
+
+    <div class="container">
+            </div>
+    <footer class="footer">
+    <p>&copy; 2024 RSR ads</p>
+</footer>
+
+    <script>document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.getElementById('navLinks');
+    const hamburger = document.getElementById('hamburger');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        // Toggle between hamburger and close icons
+        if (navLinks.classList.contains('active')) {
+            hamburger.innerHTML = '<i class="fas fa-times" style="font-size:35px;"></i>'; // Close icon
+        } else {
+            hamburger.innerHTML = `
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            `; // Default hamburger icon
+        }
+    });
+});
+</script>
+</body>
+</html>
